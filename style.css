@@ -1,0 +1,82 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+button {
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 15px 32px;
+    border-color: rgb(61, 61, 61);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+
+.main-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 200px;
+    min-height: 400px;
+    background-color: rgb(224, 224, 224);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.display {
+    background-color: rgb(229, 229, 229);
+    min-height: 75px;
+    min-width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.current {
+    font-size: 30px;
+    text-align: end;
+}
+
+.functions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Buttom half of keyboard */
+
+.numeric {
+    display: flex;
+}
+
+.operations {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Number button logic */
+
+.numberButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.numberButtons *{
+    background-color: rgb(202, 202, 202);
+}
+
+.numberButtons > *:last-child {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
